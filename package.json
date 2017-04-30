@@ -1,0 +1,30 @@
+{
+  "name": "ligong-invite",
+  "version": "1.0.0",
+  "description": "理工邀请函外包项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --env start",
+    "build": "webpack"
+  },
+  "author": "南洋",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.14",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.24.1",
+    "purifycss-webpack-plugin": "^2.0.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.0-rc.3",
+    "webpack-dev-server": "^2.2.0-rc.0",
+    "webpack-merge": "^0.19.0",
+    "webpack-validator": "^2.2.9"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}
