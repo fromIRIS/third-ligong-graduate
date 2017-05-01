@@ -32,7 +32,14 @@ switch(process.env.npm_lifecycle_event) {
     config = merge(common, 
       parts.clean(PATHS.build),
       parts.setupSourceMapForBuild(),
-      parts.setupCSS(PATHS.app),
+      parts.setupJs(),
+      parts.loadImages({
+        options: {
+          limit: 8870,
+          name: './resource/images/[name].[ext]',
+        },
+      }),
+      parts.setupCSS(),
       parts.setFreeVariable('process.env.NODE_ENV', 'production'),
       parts.minify()
       );
@@ -40,7 +47,15 @@ switch(process.env.npm_lifecycle_event) {
   default: 
     config = merge(common, 
       parts.setupSourceMapForDev(),
-      parts.devServer(), 
-      parts.setupCSS(PATHS.app));
+      parts.devServer(),
+      parts.loadImages({
+        options: {
+          limit: 8870,
+          name: './resource/images/[name].[ext]',
+        },
+      }),
+      parts.setupJs(),
+      parts.setupCSS());
+      
 }
 module.exports = config;

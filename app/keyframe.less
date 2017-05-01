@@ -1,0 +1,219 @@
+// common
+@keyframes rotate {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -360deg);
+    transform: rotate3d(0, 0, 1, -360deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+.rotate {
+  animation-name: rotate;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse-huge {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.3, 1.3, 1.3);
+    transform: scale3d(1.3, 1.3, 1.3);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.pulse-huge {
+  animation-name: pulse-huge;
+}
+
+@keyframes fadeIn-tada {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+
+  55%, 60% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  65%, 75%, 85%, 95% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  70%, 80%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.fadeIn-tada {
+  animation-name: fadeIn-tada;
+}
+
+// 左右摇摆均速
+@keyframes wobble-average {
+  from {
+    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  50% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  to {
+    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+}
+.wobble-average {
+  animation-name: wobble-average;
+}
+
+
+
+
+// page4
+// 下楼梯
+@keyframes climb-down-left {
+  from {
+    transform: none;
+  }
+
+  30% {
+    transform: translate3d(-30%, -10%, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 70%, 0);
+  }
+}
+.climb-down-left {
+  animation-name: climb-down-left;
+}
+
+@keyframes climb-down-right {
+  from {
+    transform: none;
+  }
+
+  30% {
+    transform: translate3d(30%, -10%, 0);
+  }
+
+  to {
+    transform: translate3d(50%, 70%, 0);
+  }
+}
+.climb-down-right {
+  animation-name: climb-down-right;
+}
+
+// page5
+// 打针
+@keyframes slideInDownQuick {
+  from {
+    transform: translate3d(0, -50%, 0);
+    visibility: visible;
+  }
+
+  25% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.slideInDownQuick {
+  animation-name: slideInDownQuick;
+}
+
+// page6 
+// 走楼梯
+@keyframes downstairLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  25% {
+    transform: translate3d(-15%, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-15%, 10%, 0);
+  }
+
+  75% {
+    transform: translate3d(-30%, 10%, 0);
+  }
+
+  to {
+    transform: translate3d(-30%, 20%, 0);
+  }
+}
+.downstairLeft {
+  animation-name: downstairLeft;
+}
+
+@keyframes downstairRight {
+  from {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  25% {
+    transform: translate3d(15%, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(15%, 10%, 0);
+  }
+
+  75% {
+    transform: translate3d(30%, 10%, 0);
+  }
+
+  to {
+    transform: translate3d(30%, 20%, 0);
+  }
+}
+.downstairRight {
+  animation-name: downstairRight;
+}
