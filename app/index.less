@@ -2,10 +2,25 @@
 @import './animate';
 @import './keyframe';
 
+.audio-btn {
+  z-index: 999;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 5px;
+  top: 5px;  
+  background-image: url('../resource/images/pause.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &.pause {
+    background-image: url('../resource/images/play.png');
+  }  
+}
 
 .page {
   width: 100%;
-  height: 667px;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -16,6 +31,7 @@
 }
 .page1 {
   width: 100%;
+  height: 667px;
   background-color: #000;
   background-image: url('../resource/images/1-bg.jpg');
   background-size: cover;
@@ -104,10 +120,30 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .title-1 {
+    width: 100%;
+    height: 247px/2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('../resource/images/1-title-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .title-2 {
+    width: 100%;
+    height: 80px/2;
+    position: absolute;
+    left: 0;
+    top: 897px/2;
+    background-image: url('../resource/images/1-title-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .page2 {
-  width: 100%;
+  width: 100%;  
   background-color: #000;
   background-image: url('../resource/images/2-bg.jpg');
   background-size: cover;
@@ -129,7 +165,7 @@
     top: 179px/2;
     background-image: url('../resource/images/2-2.png');
     .active& {
-      .slideInLeft();
+      .slideInBigLeft();
     }
   }
   .deco-3 {
@@ -151,7 +187,7 @@
     background-image: url('../resource/images/2-4.png');
     .active& {
       .flash();
-      animation-delay: 8s;
+      animation-delay: 2s;
     }
   }
   .deco-5 {
@@ -224,7 +260,7 @@
     background-image: url('../resource/images/2-11.png');
     .active& {
       .flash();
-      animation-delay: 8s;
+      animation-delay: 2s;
     }
   }
   .deco-title {
@@ -315,6 +351,7 @@
 
 .page3 {
   width: 100%;
+  height: 0;
   background-color: #ffe4e2;
   .content-1 {
     width: 100%;
@@ -322,6 +359,7 @@
     background-image: url('../resource/images/3-1-bg.png');
     background-size: cover;
     position: relative;
+    margin-top: -30px/2;
     .active& {
       .slideInRight();
       animation-timing-function: ease;
@@ -335,8 +373,18 @@
       background-image: url('../resource/images/3-1-boom.png');
       background-size: cover;
       .active& {
-        .jello();
+        .jelloHuge();
         animation-delay: 1s;
+      }
+    }
+    .title {
+      width: 100%;
+      height: 70px/2;
+      left: 20%;
+      top: 386px/2;
+      background-image: url('../resource/images/3-1-title.png');
+      .active& {
+        .fadeIn-tada();
       }
     }
   }
@@ -346,24 +394,62 @@
     background-image: url('../resource/images/3-2-bg.png');
     background-size: cover;
     position: relative;
+    margin-top: -20px/2;
     .active& {
       .slideInLeft();
       animation-timing-function: ease;
       animation-duration: 0.5s;
       animation-delay: 1.5s;
     }
-    .plane-ufo {
-      width: 212px/2;
-      height: 210px/2;
+    .plane-ufo-1 {
+      width: 159px/2;
+      height: 98px/2;
       left: 0;
       top: 86px/2;
-      background-image: url('../resource/images/3-2-plane.png');
+      background-image: url('../resource/images/3-2-plane-1.png');
       background-size: cover;
       .active& {
         .slideInLeft();
         animation-timing-function: ease;
         animation-delay: 2s;
         animation-duration: 0.5s;
+      }
+    }
+    .plane-ufo-2 {
+      width: 220px/2;
+      height: 136px/2;
+      left: 0;
+      top: 144px/2;
+      background-image: url('../resource/images/3-2-plane-2.png');
+      background-size: cover;
+      .active& {
+        .flashAnti();
+        animation-delay: 2.5s;
+      }
+    }
+    .light {
+      width: 334px/2;
+      height: 283px/2;
+      left: 224px/2;
+      top: 35px/2;
+      background-image: url('../resource/images/3-2-light.png');
+      background-size: cover;
+      .active& {
+        .flash();
+        animation-delay: 2.5s;
+        animation-duration: 2s;
+      }
+    }
+    .ya {
+      width: 149px/2;
+      height: 75px/2;
+      right: 0;
+      top: 140px/2;
+      background-image: url('../resource/images/3-2-ya.png');
+      background-size: cover;
+      .active& {
+        .tada();
+        animation-delay: 2.5s;
       }
     }
   }
@@ -373,23 +459,36 @@
     background-image: url('../resource/images/3-3-bga.png');
     background-size: cover;
     position: relative;
+    margin-top: -28px/2;
     .active& {
       .slideInRight();
       animation-timing-function: ease;
       animation-duration: 0.5s;
       animation-delay: 2.5s;
     }
-    .plane-ufo {
-      width: 227px/2;
-      height: 213px/2;
+    .plane-ufo-1 {
+      width: 159px/2;
+      height: 90px/2;
       right: 0;
-      top: 0;
-      background-image: url('../resource/images/3-3-plane.png');
+      top: 56px/2;
+      background-image: url('../resource/images/3-3-plane-1.png');
       .active& {
         .slideInRight();
         animation-timing-function: ease;
         animation-duration: 0.5s;
         animation-delay: 3s;
+      }
+    }
+    .plane-ufo-2 {
+      width: 199px/2;
+      height: 111px/2;
+      right: 0;
+      top: 120px/2;
+      background-image: url('../resource/images/3-3-plane-2.png');
+      background-size: cover;
+      .active& {
+        .flashAnti();
+        animation-delay: 3.5s;
       }
     }
     .star-bg {
@@ -418,8 +517,8 @@
     .title {
       width: 561px/2;
       height: 97px/2;
-      left: 0;
-      top: 0;
+      left: 44px/2;
+      top: 12px/2;
       background-image: url('../resource/images/3-3-title.png');
       .active& {
         .fadeIn-tada();
@@ -431,6 +530,7 @@
 
 .page4 {
   width: 100%;
+  height: 0;
   background-color: #000;
   background-image: url('../resource/images/4-bg.jpg');
   background-size: cover;
@@ -470,6 +570,36 @@
       animation-delay: 1s;
     }
   }
+  .people-1 {
+    width: 174px/2;
+    height: 193px/2;
+    left: 103px/2;
+    top: 813px/2;
+    background-image: url('../resource/images/4-people-1.png');
+    .active& {
+      .shake();
+    }
+  }
+  .people-2 {
+    width: 130px/2;
+    height: 166px/2;
+    left: 389px/2;
+    top: 741px/2;
+    background-image: url('../resource/images/4-people-2.png');
+    .active& {
+      .rubberBand();
+    }
+  }
+  .bottom {
+    width: 100%;
+    height: 200px/2;
+    left: 0;
+    top: 959px/2;
+    background-image: url('../resource/images/4-bottom.png');
+    .active& {
+      .flash();
+    }
+  }
 }
 
 .page5 {
@@ -480,8 +610,8 @@
   .eye {
     width: 19px/2;
     height: 18px/2;
-    left: 349px/2;
-    top: 80px/2;
+    left: 97px/2;
+    top: 52px/2;
     background-image: url('../resource/images/5-eye.png');
     .active& {
       .bounceIn();
@@ -491,7 +621,7 @@
     width: 72px/2;
     height: 73px/2;
     left: 41px/2;
-    top: 353px/2;
+    top: 320px/2;
     background-image: url('../resource/images/5-page-left.png');
     .active& {
       .wobble();
@@ -501,7 +631,7 @@
     width: 66px/2;
     height: 70px/2;
     left: 250px/2;
-    top: 363px/2;
+    top: 320px/2;
     background-image: url('../resource/images/5-page-right.png');
     .active& {
       .wobble();
@@ -512,7 +642,7 @@
     width: 7px/2;
     height: 17px/2;
     left: 454px/2;
-    top: 630px/2;
+    top: 620px/2;
     background-image: url('../resource/images/5-needle.png');
     .active& {
       .slideInDownQuick();
@@ -522,8 +652,8 @@
   .angrey {
     width: 24px/2;
     height: 24px/2;
-    left: 486px/2;
-    top: 905px/2;
+    left: 87px/2;
+    top: 56px/2;
     background-image: url('../resource/images/5-angry.png');
     .active& {
       .bounceIn();
@@ -532,12 +662,44 @@
   .title {
     width: 438px/2;
     height: 58px/2;
-    left: 0;
-    top: 1258px/2;
+    left: 194px/2;
+    top: 464px/2;
     background-image: url('../resource/images/5-title.png');
     .active& {
       .fadeIn-tada();
       animation-delay: 1s;
+    }
+  }
+  .people-1 {
+    width: 187px/2;
+    height: 235px/2;
+    left: 250px/2;
+    top: 0;
+    background-image: url('../resource/images/5-people-1.png');
+    .active& {
+      .pulse();
+    }
+  }
+  .people-2 {
+    width: 225px/2;
+    height: 204px/2;
+    left: 476px/2;
+    top: 194px/2;
+    background-image: url('../resource/images/5-people-2.png');
+    .active& {
+      .shake();
+      animation-duration: 2s;
+    }
+  }
+  .people-3 {
+    width: 344px/2;
+    height: 313px/2;
+    right: 0;
+    top: 822px/2;
+    background-image: url('../resource/images/5-people-3.png');
+    .active& {
+      .wobble();
+      animation-duration: 2s;
     }
   }
 }
@@ -588,7 +750,7 @@
   .content-2 {
     width: 100%;
     height: 444px/2;
-    background-image: url('../resource/images/6-2-bg.jpg');
+    background-image: url('../resource/images/6-2-bg.png');
     background-size: cover;
     position: relative;
     .active& {
@@ -648,7 +810,7 @@
       .slideInRight();
     }
     .title {
-      width: 240px/2;
+      width: 204px/2;
       height: 204px/2;
       left: 32px/2;
       top: -64px/2;
@@ -694,6 +856,16 @@
       }
     }
   }
+  .go {
+    width: 100%;
+    height: 55px/2;
+    top: 361px/2;
+    left: 0;
+    background-image: url('../resource/images/7-go.png');
+    .active& {
+      .flash();
+    }
+  }
   .content-2 {
     width: 100%;
     height: 338px/2;
@@ -702,15 +874,30 @@
     .active& {
       .slideInLeft();
     }
-    .plane {
-      width: 229px/2;
-      height: 200px/2;
+    .plane-ufo-1 {
+      width: 159px/2;
+      height: 98px/2;
       left: 0;
-      top: -53px/2;
-      background-image: url('../resource/images/7-2-plane.png');
+      top: 0;
+      background-image: url('../resource/images/3-2-plane-1.png');
+      background-size: cover;
       .active& {
         .slideInLeft();
-        animation-delay: 1s;
+        animation-timing-function: ease;
+        animation-delay: 2s;
+        animation-duration: 0.5s;
+      }
+    }
+    .plane-ufo-2 {
+      width: 220px/2;
+      height: 136px/2;
+      left: 0;
+      top: 50px/2;
+      background-image: url('../resource/images/3-2-plane-2.png');
+      background-size: cover;
+      .active& {
+        .flashAnti();
+        animation-delay: 2.5s;
       }
     }
     .people {
@@ -786,10 +973,10 @@
     }
   }
   .bottom-placeholder {
-    width: 351px/2;
-    height: 227px/2;
-    right: 0;
-    top: 1066px/2;
+    width: 750px/2;
+    height: 233px/2;
+    left: 0;
+    top: 944px/2;
     background-image: url('../resource/images/7-bottom.png');
   }
 }
@@ -880,8 +1067,9 @@
   }
 }
 
-.page9 {
+.page9 {  
   width: 100%;
+  height: 0;
   background-color: #18426c;
   background-image: url('../resource/images/9-bg.jpg');
   background-size: cover;
@@ -899,7 +1087,7 @@
     width: 100%;
     height: 178px/2;
     left: 0;
-    top: 378px/2;
+    top: 324px/2;
     background-image: url('../resource/images/9-title-1.png');
     .active& {
       .fadeIn-tada();
@@ -930,13 +1118,26 @@
   }
   .title-2 {
     width: 100%;
-    height: 317px/2;
+    height: 220/2px;
     left: 0;
-    top: 1008px/2;
+    top: 666/2px;
     background-image: url('../resource/images/9-title-2.png');
+    background-size: 100%;
     .active& {
       .fadeIn-tada();
       animation-delay: 3s;
+    }
+  }
+  .title-3 {
+    width: 100%;
+    height: 86/2px;
+    left: 0;
+    top: 1090/2px;
+    background-image: url('../resource/images/9-title-3.png');
+    background-size: 100%;
+    .active& {
+      .fadeIn-tada();
+      animation-delay: 4s;
     }
   }
 }
@@ -946,12 +1147,12 @@
   background-color: #e83632;
   background-image: url('../resource/images/10-bg.jpg');
   background-size: cover;
-  .people {
+  .people-1 {
     width: 100%;
     height: 334px/2;
     left: 0;
     top: 97px/2;
-    background-image: url('../resource/images/10-people.png');
+    background-image: url('../resource/images/10-people-1.png');
     z-index: 99;
     .active& {
       .flash();
@@ -992,4 +1193,28 @@
       animation-delay: 2s;      
     }
   }
+  .people-2{
+    width: 100%;
+    height: 587px/2;
+    left: 0;
+    top: 626px/2;
+    background-image: url('../resource/images/10-people-2.png');
+    z-index: 99;
+    .active& {
+      .flash();
+    }
+  }
+  .people-3 {
+    width: 100%;
+    height: 587px/2;
+    left: 0;
+    top: 626px/2;
+    background-image: url('../resource/images/10-people-3.png');
+    z-index: 99;
+    .active& {
+      .flash();
+      animation-duration: 2.8s; 
+    }
+  }
+  
 }

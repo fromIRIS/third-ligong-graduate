@@ -16,10 +16,30 @@ PageControll.prototype = {
 
     self.preloading();
     self.pages();
+    self.initAudio();
   },
   pages: function () {
     
   },
+
+  initAudio: function() {
+    var self = this;
+    var $audio = $('.j_Audio')[0];
+    var $audioBtn = $('.j_AudioBtn');
+    
+    $audio.play();
+
+    $audioBtn.on('click', function() {
+      if($(this).hasClass('pause')) {
+        $audio.play();
+        $(this).removeClass('pause');
+      } else {
+        $audio.pause();
+        $(this).addClass('pause');
+      }
+    });
+  },
+
   preloading: function () {
     var self = this;
     var $loadingArea = $('.j_LoadingArea');

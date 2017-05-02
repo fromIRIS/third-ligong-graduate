@@ -51,7 +51,9 @@ switch(process.env.npm_lifecycle_event) {
   default: 
     config = merge(common, 
       parts.setupSourceMapForDev(),
-      parts.devServer(),
+      parts.devServer({
+        host: '192.168.1.101'
+      }),
       parts.loadImages({
         options: {
           limit: 8870,
