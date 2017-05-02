@@ -52,17 +52,17 @@ PageControll.prototype = {
         $loadingBar.width($loadingBar.parent().width());
         $page1Title.addClass('tada');
         $loadingStarter.addClass('active');
-        $fullpage.fullpage({
-          change: function (e) {
-            console.log('------------------------------------');
-            console.log('change' + e.cur);
-            console.log('------------------------------------');
-            $('.page').removeClass('active');
+        // $fullpage.fullpage({
+        //   change: function (e) {
+        //     console.log('------------------------------------');
+        //     console.log('change' + e.cur);
+        //     console.log('------------------------------------');
+        //     $('.page').removeClass('active');
             
-            var pageClass = '.page' + (parseInt(e.cur) + 1);
-            $(pageClass).addClass('active');
-          }
-        });
+        //     var pageClass = '.page' + (parseInt(e.cur) + 1);
+        //     $(pageClass).addClass('active');
+        //   }
+        // });
       }) 
 
       $loadingStarter.on('click', function () {

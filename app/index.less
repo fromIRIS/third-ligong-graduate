@@ -5,7 +5,7 @@
 
 .page {
   width: 100%;
-  height: 667px;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -16,6 +16,7 @@
 }
 .page1 {
   width: 100%;
+  height: 0px;
   background-color: #000;
   background-image: url('../resource/images/1-bg.jpg');
   background-size: cover;
@@ -104,10 +105,31 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .title-1 {
+    width: 100%;
+    height: 247px/2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('../resource/images/1-title-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .title-2 {
+    width: 100%;
+    height: 80px/2;
+    position: absolute;
+    left: 0;
+    top: 897px/2;
+    background-image: url('../resource/images/1-title-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .page2 {
   width: 100%;
+  height: 0;
   background-color: #000;
   background-image: url('../resource/images/2-bg.jpg');
   background-size: cover;
@@ -315,6 +337,7 @@
 
 .page3 {
   width: 100%;
+  height: 667px;
   background-color: #ffe4e2;
   .content-1 {
     width: 100%;
@@ -322,6 +345,7 @@
     background-image: url('../resource/images/3-1-bg.png');
     background-size: cover;
     position: relative;
+    margin-top: -30px/2;
     .active& {
       .slideInRight();
       animation-timing-function: ease;
@@ -346,6 +370,7 @@
     background-image: url('../resource/images/3-2-bg.png');
     background-size: cover;
     position: relative;
+    margin-top: -36px/2;
     .active& {
       .slideInLeft();
       animation-timing-function: ease;
@@ -418,7 +443,7 @@
     .title {
       width: 561px/2;
       height: 97px/2;
-      left: 0;
+      left: 44px/2;
       top: 0;
       background-image: url('../resource/images/3-3-title.png');
       .active& {
