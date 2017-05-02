@@ -1,14 +1,11 @@
 @import './reset';
 @import './animate';
 @import './keyframe';
-.test {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-}
+
 
 .page {
   width: 100%;
+  height: 667px;
   overflow: hidden;
   position: relative;
 }
@@ -19,7 +16,6 @@
 }
 .page1 {
   width: 100%;
-  height: 0;  // test
   background-color: #000;
   background-image: url('../resource/images/1-bg.jpg');
   background-size: cover;
@@ -319,7 +315,6 @@
 
 .page3 {
   width: 100%;
-  height: 0;
   background-color: #ffe4e2;
   .content-1 {
     width: 100%;
@@ -436,7 +431,6 @@
 
 .page4 {
   width: 100%;
-  height: 0;
   background-color: #000;
   background-image: url('../resource/images/4-bg.jpg');
   background-size: cover;
@@ -480,7 +474,6 @@
 
 .page5 {
   width: 100%;
-  height: 0;
   background-color: #fdded0;
   background-image: url('../resource/images/5-bg.jpg');
   background-size: cover;
@@ -551,7 +544,6 @@
 
 .page6 {
   width: 100%;
-  height: 0;
   .content-1 {
     width: 100%;
     height: 510px/2;
@@ -671,12 +663,11 @@
 
 .page7 {
   width: 100%;
-  height: 0;
   background-color: #fff4da;
   .content-1 {
     width: 100%;
     height: 415px/2;
-    background-image: url('../resource/images/7-1-bga.jpg');
+    background-image: url('../resource/images/7-1-bga.png');
     background-size: cover;
     .active& {
       .slideInRight();
@@ -706,7 +697,7 @@
   .content-2 {
     width: 100%;
     height: 338px/2;
-    background-image: url('../resource/images/7-2-bga.jpg');
+    background-image: url('../resource/images/7-2-bga.png');
     background-size: cover;
     .active& {
       .slideInLeft();
@@ -748,7 +739,7 @@
   .content-3 {
     width: 100%;
     height: 312px/2;
-    background-image: url('../resource/images/7-3-bga.jpg');
+    background-image: url('../resource/images/7-3-bga.png');
     background-size: cover;
     .active& {
       .slideInRight();
@@ -805,6 +796,200 @@
 
 .page8 {
   width: 100%;
-  height: 667px;
-  background-color: #fff4da;
+  background-color: #d8fdf5;
+  .page-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url('../resource/images/8-bg.png');
+    background-size: cover;
+    z-index: 9;
+  }
+  .people-bottom {
+    width: 100%;
+    height: 258px/2;
+    left: 0;
+    bottom: 0;
+    background-image: url('../resource/images/8-bottom.png');
+    z-index: 99;
+    .active& {
+      .slideInUp();
+    }
+  }
+  .lighting {
+    width: 100%;
+    height: 410px/2;
+    left: -24px/2;
+    top: 80px/2;
+    background-image: url('../resource/images/8-light.png');
+    z-index: 99;
+    .active& {
+      .flash();
+    }
+  }
+  .content {
+    width: 100%;
+    height: 1029px/2;
+    background-image: url('../resource/images/8-content-bg.jpg');
+    background-size: cover;
+    .active& {
+      .slideInDown();
+      animation-delay: 1s;
+    }
+    .people-other {
+      width: 100%;
+      height: 175px/2;
+      left: 0;
+      top: 852px/2;
+      background-image: url('../resource/images/8-people-other.png');
+      .active& {
+        .fadeIn();
+        animation-delay: 2s;
+      }
+    }
+    .people-1 {
+      width: 161px/2;
+      height: 167px/2;
+      left: 280px/2;
+      top: 840px/2;
+      background-image: url('../resource/images/8-people-1.png');
+      .active& {
+        .wobble-average();
+      }
+    }
+    .people-2 {
+      width: 107px/2;
+      height: 106px/2;
+      left: 424px/2;
+      top: 729px/2;
+      background-image: url('../resource/images/8-people-2.png');
+      .active& {
+        .shake();
+        animation-duration: 2s;
+      }
+    }
+    .people-3 {
+      width: 112px/2;
+      height: 150px/2;
+      left: 175px/2;
+      top: 698px/2;
+      background-image: url('../resource/images/8-people-3.png');
+      .active& {
+        .jello();
+      }
+    }
+  }
+}
+
+.page9 {
+  width: 100%;
+  background-color: #18426c;
+  background-image: url('../resource/images/9-bg.jpg');
+  background-size: cover;
+  .people-1 {
+    width: 473px/2;
+    height: 302px/2;
+    left: 0;
+    top: 90px/2;
+    background-image: url('../resource/images/9-people-1.png');
+    .active& {
+      .fadeInLeft();
+    }
+  }
+  .title-1 {
+    width: 100%;
+    height: 178px/2;
+    left: 0;
+    top: 378px/2;
+    background-image: url('../resource/images/9-title-1.png');
+    .active& {
+      .fadeIn-tada();
+      animation-delay: 1s;
+    }
+  }
+  .people-2 {
+    width: 249px/2;
+    height: 287px/2;
+    left: 44px/2;
+    top: 762px/2;
+    background-image: url('../resource/images/9-people-2.png');
+    .active& {
+      .fadeInLeft();
+      animation-delay: 2s;
+    }
+  }
+  .earth {
+    width: 103px/2;
+    height: 104px/2;
+    left: 314px/2;
+    top: 866px/2;
+    background-image: url('../resource/images/9-earth.png');
+    .active& {
+      .tada();
+      animation-delay: 2.5s;
+    }
+  }
+  .title-2 {
+    width: 100%;
+    height: 317px/2;
+    left: 0;
+    top: 1008px/2;
+    background-image: url('../resource/images/9-title-2.png');
+    .active& {
+      .fadeIn-tada();
+      animation-delay: 3s;
+    }
+  }
+}
+
+.page10 {
+  width: 100%;
+  background-color: #e83632;
+  background-image: url('../resource/images/10-bg.jpg');
+  background-size: cover;
+  .people {
+    width: 100%;
+    height: 334px/2;
+    left: 0;
+    top: 97px/2;
+    background-image: url('../resource/images/10-people.png');
+    z-index: 99;
+    .active& {
+      .flash();
+    }
+  }
+  .title-1 {
+    width: 100%;
+    height: 84px/2;
+    left: 0;
+    top: 0;
+    background-image: url('../resource/images/10-title-1.png');
+    z-index: 9;
+    .active& {
+      .tada();
+    }
+  }
+  .title-2 {
+    width: 100%;
+    height: 164px/2;
+    left: 0;
+    top: 106px/2;
+    background-image: url('../resource/images/10-title-2.png');
+    z-index: 9;
+    .active& {
+      .wobble();
+      animation-delay: 1s;
+    }
+  }
+  .title-3 {
+    width: 100%;
+    height: 234px/2;
+    left: 0;
+    top: 451px/2;
+    background-image: url('../resource/images/10-title-3.png');
+    z-index: 9;
+    .active& {
+      .tada();
+      animation-delay: 2s;      
+    }
+  }
 }

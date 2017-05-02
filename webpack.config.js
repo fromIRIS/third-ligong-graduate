@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const parts = require('../webpack-config/parts');
+const glob = require('glob');
 
 let config = {};
 
@@ -30,7 +31,7 @@ let common = {
 switch(process.env.npm_lifecycle_event) {
   case 'build': 
     config = merge(common, 
-      parts.clean(PATHS.build),
+      // parts.clean(PATHS.build),
       parts.setupSourceMapForBuild(),
       parts.setupJs(),
       parts.loadImages({
@@ -39,7 +40,10 @@ switch(process.env.npm_lifecycle_event) {
           name: './resource/images/[name].[ext]',
         },
       }),
-      parts.setupCSS(),
+      parts.extractCSS(),
+      // parts.purifyCSS({
+      //   paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true }),
+      // }),
       parts.setFreeVariable('process.env.NODE_ENV', 'production'),
       parts.minify()
       );
