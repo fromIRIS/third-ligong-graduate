@@ -36,7 +36,7 @@ switch(process.env.npm_lifecycle_event) {
       parts.setupJs(),
       parts.loadImages({
         options: {
-          limit: 8870,
+          limit: 2200,
           name: './resource/images/[name].[ext]',
         },
       }),
