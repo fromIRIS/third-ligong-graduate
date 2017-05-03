@@ -38,6 +38,12 @@ PageControll.prototype = {
         $(this).addClass('pause');
       }
     });
+
+    var playAudioHandler = function () {
+      $audio.play();
+      $(document).unbind('touchstart', playAudioHandler);
+    }
+    $(document).on('touchstart', playAudioHandler);
   },
 
   preloading: function () {
@@ -72,6 +78,7 @@ PageControll.prototype = {
         $loadingBar.width($loadingBar.parent().width());
         $page1Title.addClass('tada');
         $loadingStarter.addClass('active');
+        $('.j_Audio')[0].play();
         $fullpage.fullpage({
           change: function (e) {
             console.log('------------------------------------');
