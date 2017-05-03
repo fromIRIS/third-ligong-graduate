@@ -52,7 +52,7 @@ switch(process.env.npm_lifecycle_event) {
     config = merge(common, 
       parts.setupSourceMapForDev(),
       parts.devServer({
-        host: '192.168.1.101'
+        host: '10.1.2.68'
       }),
       parts.loadImages({
         options: {
