@@ -37,7 +37,7 @@ switch(process.env.npm_lifecycle_event) {
       parts.loadImages({
         options: {
           limit: 2200,
-          name: './resource/images/[name].[ext]',
+          name: 'http://opfdid82m.bkt.clouddn.com/[name].[ext]',
         },
       }),
       parts.extractCSS(),
